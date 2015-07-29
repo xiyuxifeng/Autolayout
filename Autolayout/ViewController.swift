@@ -20,17 +20,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
         var homeSearchBar: HomeSearchBarView = (UINib(nibName: "HomeSearchBarView", bundle: nil).instantiateWithOwner(self, options: nil).first) as! HomeSearchBarView
         
         self.navigationItem.titleView = homeSearchBar
         
         homeSearchBar.searchBtn.addTarget(self, action: "gotoSearchVC", forControlEvents: UIControlEvents.TouchUpInside)
         
+        if IS_IPHONE_6P {
+            ScrollViewHeight.constant = 621.0 / 3.0
+        }
     }
-
+    
     func gotoSearchVC() {
-        println("Test: \(self.ScrollViewHeight.description)")
+        println("Test: \(self.ScrollViewHeight!.description)")
     }
     
     func gotoMapVC() {
