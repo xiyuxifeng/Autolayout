@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D2134" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Du-Uy-cHD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Du-Uy-cHD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -49,6 +49,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5qk-mQ-1nD"/>
+                    <connections>
+                        <outlet property="ScrollViewHeight" destination="KEv-AU-xaT" id="UP8-ZT-PN8"/>
+                        <outlet property="scrollView" destination="Da9-7P-P1j" id="3rQ-RT-LkS"/>
+                        <outlet property="tableView" destination="3HY-em-uSo" id="pbC-7C-FsI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -4,33 +4,69 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeSearchBarView" customModule="Autolayout" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UIView"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HomeSearchBarView" customModule="Autolayout" customModuleProvider="target">
+        <view contentMode="scaleToFill" restorationIdentifier="HomeSearchBarView" id="iN0-l3-epB" customClass="HomeSearchBarView" customModule="Autolayout" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDI-Fh-zil">
-                    <rect key="frame" x="545" y="0.0" width="40" height="40"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDI-Fh-zil">
+                    <rect key="frame" x="571" y="10" width="19" height="20"/>
                     <state key="normal" image="首页查看附近俱乐部图标－点击态">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoW-EN-zLy">
-                    <rect key="frame" x="8" y="5" width="529" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoW-EN-zLy">
+                    <rect key="frame" x="8" y="5" width="553" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <inset key="titleEdgeInsets" minX="40" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <state key="normal" title="ttttt" backgroundImage="首页搜索框">
+                    <state key="normal" title="搜索" backgroundImage="首页搜索框">
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="首页－搜索图标" translatesAutoresizingMaskIntoConstraints="NO" id="92b-q5-xHg">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="首页－搜索图标" translatesAutoresizingMaskIntoConstraints="NO" id="92b-q5-xHg">
                     <rect key="frame" x="18" y="10" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Gdb-g0-U3C"/>
+                        <constraint firstAttribute="width" constant="20" id="gVv-Fa-Ljw"/>
+                    </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="CDI-Fh-zil" firstAttribute="leading" secondItem="XoW-EN-zLy" secondAttribute="trailing" constant="10" id="7Px-TL-LaY"/>
+                <constraint firstItem="92b-q5-xHg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="18" id="Fh3-Of-BhP"/>
+                <constraint firstAttribute="centerY" secondItem="92b-q5-xHg" secondAttribute="centerY" id="Jeh-GK-nEV"/>
+                <constraint firstAttribute="bottom" secondItem="CDI-Fh-zil" secondAttribute="bottom" constant="10" id="QDe-7S-7Ks"/>
+                <constraint firstItem="92b-q5-xHg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="T41-bU-c3L"/>
+                <constraint firstAttribute="centerY" secondItem="CDI-Fh-zil" secondAttribute="centerY" id="YQ9-Pj-qHu"/>
+                <constraint firstAttribute="bottom" secondItem="XoW-EN-zLy" secondAttribute="bottom" constant="5" id="ZtM-RM-w4e"/>
+                <constraint firstItem="XoW-EN-zLy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="bNA-WU-98I"/>
+                <constraint firstItem="CDI-Fh-zil" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="cDN-7K-7L2"/>
+                <constraint firstAttribute="trailing" secondItem="CDI-Fh-zil" secondAttribute="trailing" constant="10" id="cVT-cK-WbV"/>
+                <constraint firstItem="CDI-Fh-zil" firstAttribute="leading" secondItem="XoW-EN-zLy" secondAttribute="trailing" constant="10" id="ctb-P3-Ngf"/>
+                <constraint firstAttribute="bottom" secondItem="92b-q5-xHg" secondAttribute="bottom" constant="10" id="lVS-HM-2L3"/>
+                <constraint firstItem="CDI-Fh-zil" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="m1X-aJ-aey"/>
+                <constraint firstAttribute="bottom" secondItem="CDI-Fh-zil" secondAttribute="bottom" id="sPK-Bk-ac8"/>
+                <constraint firstAttribute="trailing" secondItem="CDI-Fh-zil" secondAttribute="trailing" constant="20" symbolic="YES" id="saS-sl-A7q"/>
+                <constraint firstItem="XoW-EN-zLy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="wJc-Io-gk9"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="410" y="441"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="T41-bU-c3L"/>
+                    <exclude reference="lVS-HM-2L3"/>
+                    <exclude reference="7Px-TL-LaY"/>
+                    <exclude reference="m1X-aJ-aey"/>
+                    <exclude reference="sPK-Bk-ac8"/>
+                    <exclude reference="saS-sl-A7q"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="mapBtn" destination="CDI-Fh-zil" id="YF6-dL-UIh"/>
+                <outlet property="searchBtn" destination="XoW-EN-zLy" id="8gz-vl-4mA"/>
+            </connections>
+            <point key="canvasLocation" x="411" y="445"/>
         </view>
     </objects>
     <resources>
