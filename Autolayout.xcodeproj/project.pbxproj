@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2D66C3C21B68D04B00D0D707 /* Extend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D66C3C11B68D04B00D0D707 /* Extend.swift */; };
-		7B5146731B6913C2006B2F2A /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5146711B6913C2006B2F2A /* HomeTableViewCell.swift */; };
-		7B5146741B6913C2006B2F2A /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B5146721B6913C2006B2F2A /* HomeTableViewCell.xib */; };
+		2D6CCC4C1B6A13F9008B3CC4 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CCC4A1B6A13F9008B3CC4 /* HomeTableViewCell.swift */; };
+		2D6CCC4D1B6A13F9008B3CC4 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6CCC4B1B6A13F9008B3CC4 /* HomeTableViewCell.xib */; };
 		7B82000A1B66846B00B454BD /* HomeSearchBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8200091B66846B00B454BD /* HomeSearchBarView.xib */; };
 		7B82000C1B66847800B454BD /* HomeSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B82000B1B66847800B454BD /* HomeSearchBarView.swift */; };
 		7B8200151B66887F00B454BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B8200141B66887F00B454BD /* Images.xcassets */; };
@@ -32,8 +32,8 @@
 
 /* Begin PBXFileReference section */
 		2D66C3C11B68D04B00D0D707 /* Extend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extend.swift; sourceTree = "<group>"; };
-		7B5146711B6913C2006B2F2A /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		7B5146721B6913C2006B2F2A /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		2D6CCC4A1B6A13F9008B3CC4 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		2D6CCC4B1B6A13F9008B3CC4 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		7B8200091B66846B00B454BD /* HomeSearchBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeSearchBarView.xib; sourceTree = "<group>"; };
 		7B82000B1B66847800B454BD /* HomeSearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSearchBarView.swift; sourceTree = "<group>"; };
 		7B8200141B66887F00B454BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -79,8 +79,8 @@
 			children = (
 				7B8200091B66846B00B454BD /* HomeSearchBarView.xib */,
 				7B82000B1B66847800B454BD /* HomeSearchBarView.swift */,
-				7B5146711B6913C2006B2F2A /* HomeTableViewCell.swift */,
-				7B5146721B6913C2006B2F2A /* HomeTableViewCell.xib */,
+				2D6CCC4A1B6A13F9008B3CC4 /* HomeTableViewCell.swift */,
+				2D6CCC4B1B6A13F9008B3CC4 /* HomeTableViewCell.xib */,
 			);
 			name = HomeView;
 			sourceTree = "<group>";
@@ -226,7 +226,7 @@
 				7BC03A8E1B63D0B00049DE32 /* Main.storyboard in Resources */,
 				7B8200151B66887F00B454BD /* Images.xcassets in Resources */,
 				7B82000A1B66846B00B454BD /* HomeSearchBarView.xib in Resources */,
-				7B5146741B6913C2006B2F2A /* HomeTableViewCell.xib in Resources */,
+				2D6CCC4D1B6A13F9008B3CC4 /* HomeTableViewCell.xib in Resources */,
 				7BC03A931B63D0B00049DE32 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,7 +246,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B82000C1B66847800B454BD /* HomeSearchBarView.swift in Sources */,
-				7B5146731B6913C2006B2F2A /* HomeTableViewCell.swift in Sources */,
+				2D6CCC4C1B6A13F9008B3CC4 /* HomeTableViewCell.swift in Sources */,
 				7BC03A8B1B63D0B00049DE32 /* ViewController.swift in Sources */,
 				7BC03A891B63D0B00049DE32 /* AppDelegate.swift in Sources */,
 				2D66C3C21B68D04B00D0D707 /* Extend.swift in Sources */,

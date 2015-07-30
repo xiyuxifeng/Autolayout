@@ -8,13 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var ScrollViewHeight: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var scrollView: UIScrollView!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +24,36 @@ class ViewController: UIViewController {
         
         homeSearchBar.searchBtn.addTarget(self, action: "gotoSearchVC", forControlEvents: UIControlEvents.TouchUpInside)
         
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        tableView.registerNib(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "homeSecondCell")
+        
         if IS_IPHONE_6P {
             ScrollViewHeight.constant = 621.0 / 3.0
         }
     }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        
+        if indexPath.row % 2 == 0   {
+            var cell = tableView.dequeueReusableCellWithIdentifier("homeCell", forIndexPath: indexPath) as! UITableViewCell
+//            cell.textLabel?.text = "sss"
+            return cell
+        } else {
+            var cell = tableView.dequeueReusableCellWithIdentifier("homeSecondCell", forIndexPath: indexPath) as! UITableViewCell
+            //            cell.textLabel?.text = "sss"
+            return cell
+        }
+        
+    }
+    
     
     func gotoSearchVC() {
         println("Test: \(self.ScrollViewHeight!.description)")

@@ -2,7 +2,7 @@
 //  HomeTableViewCell.swift
 //  Autolayout
 //
-//  Created by 王辉 on 15/7/29.
+//  Created by WangHui on 15/7/30.
 //  Copyright (c) 2015年 Wang.Hui. All rights reserved.
 //
 
