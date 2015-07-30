@@ -10,9 +10,7 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var ScrollViewHeight: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +28,9 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         tableView.registerNib(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "homeSecondCell")
         
-        if IS_IPHONE_6P {
-            ScrollViewHeight.constant = 621.0 / 3.0
-        }
+//        if IS_IPHONE_6P {
+//            ScrollViewHeight.constant = 621.0 / 3.0
+//        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,7 +54,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     
     func gotoSearchVC() {
-        println("Test: \(self.ScrollViewHeight!.description)")
+//        println("Test: \(self.ScrollViewHeight!.description)")
     }
     
     func gotoMapVC() {
