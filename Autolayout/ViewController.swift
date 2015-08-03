@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var cycleView: UIScrollView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,15 +23,21 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         homeSearchBar.searchBtn.addTarget(self, action: "gotoSearchVC", forControlEvents: UIControlEvents.TouchUpInside)
         
-        
         tableView.delegate = self
         tableView.dataSource = self
         
         tableView.registerNib(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "homeSecondCell")
+    }
+    
+    
+    func getBannerData(() -> Int) {
         
-//        if IS_IPHONE_6P {
-//            ScrollViewHeight.constant = 621.0 / 3.0
-//        }
+    }
+    
+    func initCycleView() {
+        if IS_IPHONE_6P {
+            cycleView.frame = CGRect(x: cycleView.x, y: cycleView.y, width: cycleView.width, height: 621.0 / 3.0)
+        }
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,11 +49,9 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         if indexPath.row % 2 == 0   {
             var cell = tableView.dequeueReusableCellWithIdentifier("homeCell", forIndexPath: indexPath) as! UITableViewCell
-//            cell.textLabel?.text = "sss"
             return cell
         } else {
             var cell = tableView.dequeueReusableCellWithIdentifier("homeSecondCell", forIndexPath: indexPath) as! UITableViewCell
-            //            cell.textLabel?.text = "sss"
             return cell
         }
         
@@ -54,12 +59,21 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     
     func gotoSearchVC() {
-//        println("Test: \(self.ScrollViewHeight!.description)")
+        
+        self.getBannerData({
+        
+            () in return 10
+        })
+        
     }
     
     func gotoMapVC() {
         
+//        var manager = AFHTTPRequestOperationManager(baseURL:NSURL(fileURLWithPath: ""))
+//        manager.GET("", parameters: <#AnyObject!#>, success: <#((AFHTTPRequestOperation!, AnyObject!) -> Void)!##(AFHTTPRequestOperation!, AnyObject!) -> Void#>, failure: <#((AFHTTPRequestOperation!, NSError!) -> Void)!##(AFHTTPRequestOperation!, NSError!) -> Void#>)
     }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
