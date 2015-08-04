@@ -50,7 +50,7 @@
     self = [self initWithFrame:frame animationDuration:animationDuration];
     [self initScrollView_Count:count];
     
-    if (Style == PageStyle) {
+    if (Style == CycleStylePage) {
         self.pag = [[StyledPageControl alloc] initWithFrame:CGRectMake(self.x + 85, self.height - 30, 14*count, 10)];
         [self.pag setPageControlStyle:PageControlStyleThumb];
         self.pag.selectedThumbImage = [UIImage imageNamed:@"首页－活动banner上的当前轮播点"];

@@ -22,3 +22,23 @@ let IS_IPHONE_4_OR_LESS = IS_IPHONE && (SCREEN_MAX_LENGTH) < 568.0
 let IS_IPHONE_5         = IS_IPHONE && (SCREEN_MAX_LENGTH) == 568.0
 let IS_IPHONE_6         = IS_IPHONE && (SCREEN_MAX_LENGTH) == 667.0
 let IS_IPHONE_6P        = IS_IPHONE && (SCREEN_MAX_LENGTH) == 736.0
+
+func getImageURLString(imageUrl: String, #width: Int, #height: Int) -> String {
+    
+    var exactUrl = ""
+    var urlArr = imageUrl.componentsSeparatedByString("/")
+    
+    for i in 0..<urlArr.count - 1  {
+        if i == 2 {
+            exactUrl = exactUrl.stringByAppendingString("image.kiklink.com")
+        } else {
+            exactUrl = exactUrl.stringByAppendingString(urlArr[i])
+        }
+        
+        exactUrl = exactUrl.stringByAppendingString("/")
+    }
+    
+    exactUrl = exactUrl.stringByAppendingFormat("@%dw_%dh_1e_1c_1o_100Q.png", width, height)
+    
+    return exactUrl
+}

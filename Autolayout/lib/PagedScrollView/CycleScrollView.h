@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 typedef enum : NSUInteger {
-    PageStyle = 0,
-    LabelStyle,
+    CycleStylePage = 0,
+    CycleStyleLabel,
 } CycleStyle;
 
 @interface CycleScrollView : UIView
