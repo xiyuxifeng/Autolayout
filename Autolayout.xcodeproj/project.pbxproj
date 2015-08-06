@@ -39,6 +39,8 @@
 		7B82000A1B66846B00B454BD /* HomeSearchBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8200091B66846B00B454BD /* HomeSearchBarView.xib */; };
 		7B82000C1B66847800B454BD /* HomeSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B82000B1B66847800B454BD /* HomeSearchBarView.swift */; };
 		7B8200151B66887F00B454BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B8200141B66887F00B454BD /* Images.xcassets */; };
+		7B90D2F11B739D0700E7CF39 /* ClubDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B90D2EF1B739D0700E7CF39 /* ClubDetailViewController.swift */; };
+		7B90D2F21B739D0700E7CF39 /* ClubDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B90D2F01B739D0700E7CF39 /* ClubDetailViewController.xib */; };
 		7BC03A891B63D0B00049DE32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC03A881B63D0B00049DE32 /* AppDelegate.swift */; };
 		7BC03A8B1B63D0B00049DE32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC03A8A1B63D0B00049DE32 /* ViewController.swift */; };
 		7BC03A8E1B63D0B00049DE32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC03A8C1B63D0B00049DE32 /* Main.storyboard */; };
@@ -106,7 +108,9 @@
 		2DAD73971B72F717005F4A87 /* RACmetamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACmetamacros.h; sourceTree = "<group>"; };
 		7B8200091B66846B00B454BD /* HomeSearchBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeSearchBarView.xib; sourceTree = "<group>"; };
 		7B82000B1B66847800B454BD /* HomeSearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSearchBarView.swift; sourceTree = "<group>"; };
-		7B8200141B66887F00B454BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7B8200141B66887F00B454BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
+		7B90D2EF1B739D0700E7CF39 /* ClubDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubDetailViewController.swift; sourceTree = "<group>"; };
+		7B90D2F01B739D0700E7CF39 /* ClubDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClubDetailViewController.xib; sourceTree = "<group>"; };
 		7BC03A831B63D0B00049DE32 /* Autolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Autolayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC03A871B63D0B00049DE32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BC03A881B63D0B00049DE32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -273,10 +277,42 @@
 			name = HomeView;
 			sourceTree = "<group>";
 		};
+		7B90D2EB1B739C4500E7CF39 /* Club */ = {
+			isa = PBXGroup;
+			children = (
+				7B90D2F51B739DC300E7CF39 /* Model */,
+				7B90D2F41B739DB000E7CF39 /* View */,
+				7B90D2F31B739D9800E7CF39 /* Controller */,
+			);
+			name = Club;
+			sourceTree = "<group>";
+		};
+		7B90D2F31B739D9800E7CF39 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7B90D2EF1B739D0700E7CF39 /* ClubDetailViewController.swift */,
+				7B90D2F01B739D0700E7CF39 /* ClubDetailViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7B90D2F41B739DB000E7CF39 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7B90D2F51B739DC300E7CF39 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		7BC03A7A1B63D0B00049DE32 = {
 			isa = PBXGroup;
 			children = (
-				7B8200141B66887F00B454BD /* Images.xcassets */,
 				7BC03A851B63D0B00049DE32 /* Autolayout */,
 				7BC03A841B63D0B00049DE32 /* Products */,
 				D30553DA54BE4EDF804EA0F4 /* Pods */,
@@ -295,6 +331,7 @@
 		7BC03A851B63D0B00049DE32 /* Autolayout */ = {
 			isa = PBXGroup;
 			children = (
+				7B90D2EB1B739C4500E7CF39 /* Club */,
 				2D841C8B1B6EFD6B00DF7AA4 /* lib */,
 				2D841C881B6EFBEC00DF7AA4 /* Common */,
 				7B82000D1B66867E00B454BD /* Home */,
@@ -306,6 +343,7 @@
 		7BC03A861B63D0B00049DE32 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7B8200141B66887F00B454BD /* Images.xcassets */,
 				7BC03A881B63D0B00049DE32 /* AppDelegate.swift */,
 				7BC03A8C1B63D0B00049DE32 /* Main.storyboard */,
 				7BC03A911B63D0B00049DE32 /* LaunchScreen.xib */,
@@ -385,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BC03A8E1B63D0B00049DE32 /* Main.storyboard in Resources */,
+				7B90D2F21B739D0700E7CF39 /* ClubDetailViewController.xib in Resources */,
 				7B8200151B66887F00B454BD /* Images.xcassets in Resources */,
 				7B82000A1B66846B00B454BD /* HomeSearchBarView.xib in Resources */,
 				2D6CCC4D1B6A13F9008B3CC4 /* HomeTableViewCell.xib in Resources */,
@@ -440,6 +479,7 @@
 				2D841CCB1B6EFD6B00DF7AA4 /* SDWebImageManager+MJ.m in Sources */,
 				2D6CCC4C1B6A13F9008B3CC4 /* HomeTableViewCell.swift in Sources */,
 				2D841CC21B6EFD6B00DF7AA4 /* NSTimer+Addition.m in Sources */,
+				7B90D2F11B739D0700E7CF39 /* ClubDetailViewController.swift in Sources */,
 				2D841CD71B6F514500DF7AA4 /* AFHTTPClient.swift in Sources */,
 				7BC03A8B1B63D0B00049DE32 /* ViewController.swift in Sources */,
 				2D841CD21B6EFD6B00DF7AA4 /* UIImageView+MJWebCache.m in Sources */,
