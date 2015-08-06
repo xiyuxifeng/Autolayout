@@ -8,3 +8,7 @@
 #import "UIView+Category.h"
 #import "UIView+PPCategory.h"
 #import "CycleScrollView.h"
+#import "RACEXTKeyPathCoding.h"
+#import "RACEXTRuntimeExtensions.h"
+#import "RACEXTScope.h"
+#import "RACmetamacros.h"

@@ -12,7 +12,7 @@ let BaseURL = "http://dev.kiklink.com:8086/v1/"
 
 class AFHTTPClient: AFHTTPSessionManager {
     
-    class func shareClient() -> AFHTTPClient? {
+    class func shareClient() -> AFHTTPClient {
         
         struct Static {
             static var shareClient: AFHTTPClient? = nil
@@ -36,7 +36,7 @@ class AFHTTPClient: AFHTTPSessionManager {
             
         })
         
-        return Static.shareClient
+        return Static.shareClient!
     }
 }
 

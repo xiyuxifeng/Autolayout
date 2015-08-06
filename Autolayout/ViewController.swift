@@ -11,8 +11,6 @@ import UIKit
 typealias BannerCallBackBlock = (result: AnyObject!, error: NSError?) -> Void
 
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
-
-    var tempView: UIView? = nil
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -81,13 +79,28 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         headerView.totalPagesCount = { dataArr.count }
         
+        headerView.TapActionBlock = {(pageIndex: Int) in
+            var dict = dataArr[pageIndex] as! NSDictionary
+            var type = dict.valueForKey("type") as! Int
+            var toid = dict.valueForKey("toid") as! Int
+            
+            if type == 1 {
+                
+                println("type 1 click")
+                
+            } else {
+                
+                println("other type click")
+            }
+        }
+        
         tableView.tableHeaderView = headerView
         
     }
     
     func getBannerDataFromServer(callBackBlock: BannerCallBackBlock?) {
         
-        var manager = AFHTTPClient.shareClient()?.GET("nalan/bulletin.json", parameters: nil, success: {(task:  NSURLSessionDataTask!, responseObject: AnyObject!) -> Void in
+        var manager = AFHTTPClient.shareClient().GET("nalan/bulletin.json", parameters: nil, success: {(task:  NSURLSessionDataTask!, responseObject: AnyObject!) -> Void in
             
             if let callBack = callBackBlock {
                 

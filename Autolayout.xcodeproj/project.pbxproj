@@ -35,6 +35,7 @@
 		2D841CD31B6EFD6B00DF7AA4 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D841CBA1B6EFD6B00DF7AA4 /* UIImageView+WebCache.m */; };
 		2D841CD41B6EFD6B00DF7AA4 /* StyledPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D841CBD1B6EFD6B00DF7AA4 /* StyledPageControl.m */; };
 		2D841CD71B6F514500DF7AA4 /* AFHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D841CD61B6F514500DF7AA4 /* AFHTTPClient.swift */; };
+		2DAD73981B72F717005F4A87 /* RACEXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD73951B72F717005F4A87 /* RACEXTRuntimeExtensions.m */; };
 		7B82000A1B66846B00B454BD /* HomeSearchBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8200091B66846B00B454BD /* HomeSearchBarView.xib */; };
 		7B82000C1B66847800B454BD /* HomeSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B82000B1B66847800B454BD /* HomeSearchBarView.swift */; };
 		7B8200151B66887F00B454BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B8200141B66887F00B454BD /* Images.xcassets */; };
@@ -98,6 +99,11 @@
 		2D841CD51B6EFD8F00DF7AA4 /* Autolayout-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Autolayout-Prefix.pch"; sourceTree = "<group>"; };
 		2D841CD61B6F514500DF7AA4 /* AFHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFHTTPClient.swift; sourceTree = "<group>"; };
 		2D8CB6461B6B0A820084E1C4 /* Autolayout-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autolayout-Bridging-Header.h"; sourceTree = "<group>"; };
+		2DAD73931B72F717005F4A87 /* RACEXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACEXTKeyPathCoding.h; sourceTree = "<group>"; };
+		2DAD73941B72F717005F4A87 /* RACEXTRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACEXTRuntimeExtensions.h; sourceTree = "<group>"; };
+		2DAD73951B72F717005F4A87 /* RACEXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACEXTRuntimeExtensions.m; sourceTree = "<group>"; };
+		2DAD73961B72F717005F4A87 /* RACEXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACEXTScope.h; sourceTree = "<group>"; };
+		2DAD73971B72F717005F4A87 /* RACmetamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACmetamacros.h; sourceTree = "<group>"; };
 		7B8200091B66846B00B454BD /* HomeSearchBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeSearchBarView.xib; sourceTree = "<group>"; };
 		7B82000B1B66847800B454BD /* HomeSearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSearchBarView.swift; sourceTree = "<group>"; };
 		7B8200141B66887F00B454BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 		2D841C8B1B6EFD6B00DF7AA4 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				2DAD73921B72F717005F4A87 /* extobjc */,
 				2D841C8C1B6EFD6B00DF7AA4 /* MBProgressHUD */,
 				2D841C921B6EFD6B00DF7AA4 /* PagedScrollView */,
 				2D841C9B1B6EFD6B00DF7AA4 /* SDWebImage */,
@@ -231,6 +238,19 @@
 				2D841CBD1B6EFD6B00DF7AA4 /* StyledPageControl.m */,
 			);
 			path = StyledPageControl;
+			sourceTree = "<group>";
+		};
+		2DAD73921B72F717005F4A87 /* extobjc */ = {
+			isa = PBXGroup;
+			children = (
+				2DAD73931B72F717005F4A87 /* RACEXTKeyPathCoding.h */,
+				2DAD73941B72F717005F4A87 /* RACEXTRuntimeExtensions.h */,
+				2DAD73951B72F717005F4A87 /* RACEXTRuntimeExtensions.m */,
+				2DAD73961B72F717005F4A87 /* RACEXTScope.h */,
+				2DAD73971B72F717005F4A87 /* RACmetamacros.h */,
+			);
+			name = extobjc;
+			path = RAC/extobjc;
 			sourceTree = "<group>";
 		};
 		7B82000D1B66867E00B454BD /* Home */ = {
@@ -431,6 +451,7 @@
 				2D841CD31B6EFD6B00DF7AA4 /* UIImageView+WebCache.m in Sources */,
 				2D841CD01B6EFD6B00DF7AA4 /* UIImage+MultiFormat.m in Sources */,
 				2D841CC91B6EFD6B00DF7AA4 /* SDWebImageDownloader.m in Sources */,
+				2DAD73981B72F717005F4A87 /* RACEXTRuntimeExtensions.m in Sources */,
 				2D66C3C21B68D04B00D0D707 /* Extend.swift in Sources */,
 				2D841CD41B6EFD6B00DF7AA4 /* StyledPageControl.m in Sources */,
 				2D841CC51B6EFD6B00DF7AA4 /* NSData+GIF.m in Sources */,
