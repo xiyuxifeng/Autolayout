@@ -35,6 +35,8 @@
 		2D841CD31B6EFD6B00DF7AA4 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D841CBA1B6EFD6B00DF7AA4 /* UIImageView+WebCache.m */; };
 		2D841CD41B6EFD6B00DF7AA4 /* StyledPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D841CBD1B6EFD6B00DF7AA4 /* StyledPageControl.m */; };
 		2D841CD71B6F514500DF7AA4 /* AFHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D841CD61B6F514500DF7AA4 /* AFHTTPClient.swift */; };
+		2D92008F1B744F3F00B90973 /* ClubHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D92008E1B744F3F00B90973 /* ClubHeaderView.swift */; };
+		2D9200911B744F6100B90973 /* ClubHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D9200901B744F6100B90973 /* ClubHeaderView.xib */; };
 		2DAD73981B72F717005F4A87 /* RACEXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DAD73951B72F717005F4A87 /* RACEXTRuntimeExtensions.m */; };
 		7B82000A1B66846B00B454BD /* HomeSearchBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B8200091B66846B00B454BD /* HomeSearchBarView.xib */; };
 		7B82000C1B66847800B454BD /* HomeSearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B82000B1B66847800B454BD /* HomeSearchBarView.swift */; };
@@ -101,6 +103,8 @@
 		2D841CD51B6EFD8F00DF7AA4 /* Autolayout-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Autolayout-Prefix.pch"; sourceTree = "<group>"; };
 		2D841CD61B6F514500DF7AA4 /* AFHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFHTTPClient.swift; sourceTree = "<group>"; };
 		2D8CB6461B6B0A820084E1C4 /* Autolayout-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Autolayout-Bridging-Header.h"; sourceTree = "<group>"; };
+		2D92008E1B744F3F00B90973 /* ClubHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubHeaderView.swift; sourceTree = "<group>"; };
+		2D9200901B744F6100B90973 /* ClubHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClubHeaderView.xib; sourceTree = "<group>"; };
 		2DAD73931B72F717005F4A87 /* RACEXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACEXTKeyPathCoding.h; sourceTree = "<group>"; };
 		2DAD73941B72F717005F4A87 /* RACEXTRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACEXTRuntimeExtensions.h; sourceTree = "<group>"; };
 		2DAD73951B72F717005F4A87 /* RACEXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACEXTRuntimeExtensions.m; sourceTree = "<group>"; };
@@ -299,6 +303,8 @@
 		7B90D2F41B739DB000E7CF39 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2D92008E1B744F3F00B90973 /* ClubHeaderView.swift */,
+				2D9200901B744F6100B90973 /* ClubHeaderView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -427,6 +433,7 @@
 				7B8200151B66887F00B454BD /* Images.xcassets in Resources */,
 				7B82000A1B66846B00B454BD /* HomeSearchBarView.xib in Resources */,
 				2D6CCC4D1B6A13F9008B3CC4 /* HomeTableViewCell.xib in Resources */,
+				2D9200911B744F6100B90973 /* ClubHeaderView.xib in Resources */,
 				7BC03A931B63D0B00049DE32 /* LaunchScreen.xib in Resources */,
 				2D841CBF1B6EFD6B00DF7AA4 /* MBProgressHUD.bundle in Resources */,
 			);
@@ -477,6 +484,7 @@
 				2D841CCD1B6EFD6B00DF7AA4 /* SDWebImagePrefetcher.m in Sources */,
 				2D841CBE1B6EFD6B00DF7AA4 /* MBProgressHUD+Add.m in Sources */,
 				2D841CCB1B6EFD6B00DF7AA4 /* SDWebImageManager+MJ.m in Sources */,
+				2D92008F1B744F3F00B90973 /* ClubHeaderView.swift in Sources */,
 				2D6CCC4C1B6A13F9008B3CC4 /* HomeTableViewCell.swift in Sources */,
 				2D841CC21B6EFD6B00DF7AA4 /* NSTimer+Addition.m in Sources */,
 				7B90D2F11B739D0700E7CF39 /* ClubDetailViewController.swift in Sources */,

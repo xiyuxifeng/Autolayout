@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ClubHeaderView" customModule="Autolayout" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="224"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iw2-3r-WZv">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="uxP-Wb-MgD"/>
+                    </constraints>
+                </imageView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="white" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="IIR-Lf-CqX">
+                    <rect key="frame" x="10" y="180" width="460" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="b50-Yb-dG1"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="8" minimumInteritemSpacing="8" id="w84-in-wn3">
+                        <size key="itemSize" width="44" height="44"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAw-Lw-9lO">
+                    <rect key="frame" x="480" y="190" width="110" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="xc4-mn-9JL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="999人加入" backgroundImage="俱乐部－多少人加入圈子－加入状态">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="iw2-3r-WZv" secondAttribute="trailing" id="609-CE-rbP"/>
+                <constraint firstItem="GAw-Lw-9lO" firstAttribute="top" secondItem="iw2-3r-WZv" secondAttribute="bottom" constant="10" id="CHU-bZ-g7I"/>
+                <constraint firstItem="iw2-3r-WZv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Hdd-7U-b6m"/>
+                <constraint firstAttribute="bottom" secondItem="IIR-Lf-CqX" secondAttribute="bottom" id="Jxs-g0-NaA"/>
+                <constraint firstItem="IIR-Lf-CqX" firstAttribute="top" secondItem="iw2-3r-WZv" secondAttribute="bottom" id="Pni-yY-Zds"/>
+                <constraint firstItem="IIR-Lf-CqX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="aXA-nD-T5Q"/>
+                <constraint firstItem="GAw-Lw-9lO" firstAttribute="leading" secondItem="IIR-Lf-CqX" secondAttribute="trailing" constant="10" id="faY-Uf-Ff0"/>
+                <constraint firstItem="GAw-Lw-9lO" firstAttribute="leading" secondItem="IIR-Lf-CqX" secondAttribute="trailing" constant="10" id="gFM-Ib-dvT"/>
+                <constraint firstAttribute="trailing" secondItem="GAw-Lw-9lO" secondAttribute="trailing" constant="10" id="gqx-gO-B8p"/>
+                <constraint firstItem="IIR-Lf-CqX" firstAttribute="centerY" secondItem="GAw-Lw-9lO" secondAttribute="centerY" id="ltc-lx-M37"/>
+                <constraint firstItem="iw2-3r-WZv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="p3i-aF-a6c"/>
+                <constraint firstAttribute="bottom" secondItem="GAw-Lw-9lO" secondAttribute="bottom" constant="10" id="zUX-UE-hXy"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headerBtn" destination="GAw-Lw-9lO" id="21b-Yz-Ky3"/>
+                <outlet property="headerCollection" destination="IIR-Lf-CqX" id="pov-NA-lfD"/>
+                <outlet property="headerImageView" destination="iw2-3r-WZv" id="9Oc-g0-1H8"/>
+            </connections>
+            <point key="canvasLocation" x="446" y="404"/>
+        </view>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AmD-ne-82f">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <point key="canvasLocation" x="606" y="703"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="俱乐部－多少人加入圈子－加入状态" width="114" height="36"/>
+    </resources>
+</document>
