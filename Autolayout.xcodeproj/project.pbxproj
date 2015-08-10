@@ -47,6 +47,8 @@
 		7BC03A8B1B63D0B00049DE32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC03A8A1B63D0B00049DE32 /* ViewController.swift */; };
 		7BC03A8E1B63D0B00049DE32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BC03A8C1B63D0B00049DE32 /* Main.storyboard */; };
 		7BC03A931B63D0B00049DE32 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BC03A911B63D0B00049DE32 /* LaunchScreen.xib */; };
+		7BD117401B78D1EE00B35BD1 /* ClubInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD1173E1B78D1EE00B35BD1 /* ClubInfoCell.swift */; };
+		7BD117411B78D1EE00B35BD1 /* ClubInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BD1173F1B78D1EE00B35BD1 /* ClubInfoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +123,8 @@
 		7BC03A8A1B63D0B00049DE32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7BC03A8D1B63D0B00049DE32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BC03A921B63D0B00049DE32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		7BD1173E1B78D1EE00B35BD1 /* ClubInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClubInfoCell.swift; sourceTree = "<group>"; };
+		7BD1173F1B78D1EE00B35BD1 /* ClubInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClubInfoCell.xib; sourceTree = "<group>"; };
 		B6A89FC178EAD1136EF4430F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E3E6EF3BE75904D1E4190A8D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -305,6 +309,8 @@
 			children = (
 				2D92008E1B744F3F00B90973 /* ClubHeaderView.swift */,
 				2D9200901B744F6100B90973 /* ClubHeaderView.xib */,
+				7BD1173E1B78D1EE00B35BD1 /* ClubInfoCell.swift */,
+				7BD1173F1B78D1EE00B35BD1 /* ClubInfoCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -433,6 +439,7 @@
 				7B8200151B66887F00B454BD /* Images.xcassets in Resources */,
 				7B82000A1B66846B00B454BD /* HomeSearchBarView.xib in Resources */,
 				2D6CCC4D1B6A13F9008B3CC4 /* HomeTableViewCell.xib in Resources */,
+				7BD117411B78D1EE00B35BD1 /* ClubInfoCell.xib in Resources */,
 				2D9200911B744F6100B90973 /* ClubHeaderView.xib in Resources */,
 				7BC03A931B63D0B00049DE32 /* LaunchScreen.xib in Resources */,
 				2D841CBF1B6EFD6B00DF7AA4 /* MBProgressHUD.bundle in Resources */,
@@ -510,6 +517,7 @@
 				2D841CC61B6EFD6B00DF7AA4 /* SDImageCache.m in Sources */,
 				2D841CC31B6EFD6B00DF7AA4 /* UIView+Category.m in Sources */,
 				2D841CC01B6EFD6B00DF7AA4 /* MBProgressHUD.m in Sources */,
+				7BD117401B78D1EE00B35BD1 /* ClubInfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
