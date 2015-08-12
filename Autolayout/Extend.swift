@@ -23,7 +23,7 @@ let IS_IPHONE_5         = IS_IPHONE && (SCREEN_MAX_LENGTH) == 568.0
 let IS_IPHONE_6         = IS_IPHONE && (SCREEN_MAX_LENGTH) == 667.0
 let IS_IPHONE_6P        = IS_IPHONE && (SCREEN_MAX_LENGTH) == 736.0
 
-func getImageURLString(imageUrl: String, #width: Int, #height: Int) -> String {
+func getImageURLString(imageUrl: String, width: Int, height: Int) -> String {
     
     var exactUrl = ""
     var urlArr = imageUrl.componentsSeparatedByString("/")

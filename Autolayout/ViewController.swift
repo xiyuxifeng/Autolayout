@@ -20,7 +20,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var homeSearchBar: HomeSearchBarView = (UINib(nibName: "HomeSearchBarView", bundle: nil).instantiateWithOwner(self, options: nil).first) as! HomeSearchBarView
+        let homeSearchBar: HomeSearchBarView = (UINib(nibName: "HomeSearchBarView", bundle: nil).instantiateWithOwner(self, options: nil).first) as! HomeSearchBarView
         
         self.navigationItem.titleView = homeSearchBar
         
@@ -41,7 +41,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     func initHeaderView() {
         self.getBannerDataFromServer { (result, error) -> Void in
             if error == nil {
-                var dataArr = result as! NSArray
+                let dataArr = result as! NSArray
                 if dataArr.count > 0 {
                     self.initCycleScrollView(dataArr)
                 }
@@ -51,17 +51,17 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     func initCycleScrollView(dataArr: NSArray) {
         
-        var scale = SCREEN_WIDTH / 320.0
+        let scale = SCREEN_WIDTH / 320.0
         tableHeader.frame = CGRectMake(0, 0, SCREEN_WIDTH, 165.0 * scale)
         
-        var headerView = CycleScrollView(frame: CGRectMake(0, 0, SCREEN_WIDTH, 165.0 * scale), animationDuration: 2.0, style: CycleStylePage, andImageCount: dataArr.count)
+        let headerView = CycleScrollView(frame: CGRectMake(0, 0, SCREEN_WIDTH, 165.0 * scale), animationDuration: 2.0, style: CycleStylePage, andImageCount: dataArr.count)
         
         var imageArr = [UIImageView]()
  
         for dict in dataArr {
             
-            var imageUrl = (dict as! NSDictionary).valueForKey("images")?.firstObject
-            var imageView = UIImageView(frame:CGRectMake(0, 0, SCREEN_WIDTH, 165.0 * scale))
+            let imageUrl = (dict as! NSDictionary).valueForKey("images")?.firstObject
+            let imageView = UIImageView(frame:CGRectMake(0, 0, SCREEN_WIDTH, 165.0 * scale))
             
             if (imageUrl != nil) && !(imageUrl is NSNull){
                 
@@ -70,7 +70,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             
             imageArr.append(imageView)
             
-            println(imageView)
+            print(imageView)
         }
         
         headerView.fetchContentViewAtIndex = {(pageIndex: Int) -> UIView in
@@ -80,17 +80,17 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         headerView.totalPagesCount = { dataArr.count }
         
         headerView.TapActionBlock = {(pageIndex: Int) in
-            var dict = dataArr[pageIndex] as! NSDictionary
-            var type = dict.valueForKey("type") as! Int
+            let dict = dataArr[pageIndex] as! NSDictionary
+            let type = dict.valueForKey("type") as! Int
             var toid = dict.valueForKey("toid") as! Int
             
             if type == 1 {
                 
-                println("type 1 click")
+                print("type 1 click")
                 
             } else {
                 
-                println("other type click")
+                print("other type click")
             }
         }
         
@@ -109,7 +109,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
                     callBack(result: responseObject.valueForKey("data"), error: nil)
                     
                 } else {
-                    println("get banner error")
+                    print("get banner error")
                 }
             }
             
@@ -145,10 +145,10 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         if indexPath.row % 2 == 0   {
-            var cell = tableView.dequeueReusableCellWithIdentifier("homeCell", forIndexPath: indexPath) as! UITableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("homeCell", forIndexPath: indexPath) 
             return cell
         } else {
-            var cell = tableView.dequeueReusableCellWithIdentifier("homeSecondCell", forIndexPath: indexPath) as! UITableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("homeSecondCell", forIndexPath: indexPath) 
             return cell
         }
         

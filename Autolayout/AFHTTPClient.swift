@@ -21,11 +21,11 @@ class AFHTTPClient: AFHTTPSessionManager {
         
         dispatch_once(&Static.onceToken, { () -> Void in
             
-            var baseURL = NSURL(string: BaseURL)
-            var sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
+            let baseURL = NSURL(string: BaseURL)
+            let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
             
             // 设置缓存大小
-            var cache = NSURLCache(memoryCapacity: 10 * 1024 * 1024, diskCapacity: 5 * 1024 * 1024, diskPath: nil)
+            let cache = NSURLCache(memoryCapacity: 10 * 1024 * 1024, diskCapacity: 5 * 1024 * 1024, diskPath: nil)
             sessionConfig.URLCache = cache
             
             
@@ -50,11 +50,11 @@ class AFHTTPClient2: AFHTTPSessionManager {
     }
     
     init() {
-        var baseURL = NSURL(string: BaseURL)
-        var sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let baseURL = NSURL(string: BaseURL)
+        let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
         
         // 设置缓存大小
-        var cache = NSURLCache(memoryCapacity: 10 * 1024 * 1024, diskCapacity: 5 * 1024 * 1024, diskPath: nil)
+        let cache = NSURLCache(memoryCapacity: 10 * 1024 * 1024, diskCapacity: 5 * 1024 * 1024, diskPath: nil)
         sessionConfig.URLCache = cache
         
         super.init(baseURL: baseURL, sessionConfiguration: sessionConfig)
@@ -80,11 +80,11 @@ class AFHTTPClient3: AFHTTPSessionManager {
     }
     
     init() {
-        var baseURL = NSURL(string: BaseURL)
-        var sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let baseURL = NSURL(string: BaseURL)
+        let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
         
         // 设置缓存大小
-        var cache = NSURLCache(memoryCapacity: 10 * 1024 * 1024, diskCapacity: 5 * 1024 * 1024, diskPath: nil)
+        let cache = NSURLCache(memoryCapacity: 10 * 1024 * 1024, diskCapacity: 5 * 1024 * 1024, diskPath: nil)
         sessionConfig.URLCache = cache
         
         super.init(baseURL: baseURL, sessionConfiguration: sessionConfig)
