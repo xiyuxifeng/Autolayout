@@ -10,6 +10,8 @@ import UIKit
 
 class ClubInfoCell: UITableViewCell {
 
+    @IBOutlet weak var infoLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -144,13 +144,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if indexPath.row % 2 == 0   {
-            let cell = tableView.dequeueReusableCellWithIdentifier("homeCell", forIndexPath: indexPath) 
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCellWithIdentifier("homeSecondCell", forIndexPath: indexPath) 
-            return cell
-        }
+        let cell = tableView.dequeueReusableCellWithIdentifier("homeSecondCell", forIndexPath: indexPath) as! HomeTableViewCell
+        return cell
         
     }
     
