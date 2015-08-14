@@ -100,7 +100,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     func getBannerDataFromServer(callBackBlock: BannerCallBackBlock?) {
         
-        var manager = AFHTTPClient.shareClient().GET("nalan/bulletin.json", parameters: nil, success: {(task:  NSURLSessionDataTask!, responseObject: AnyObject!) -> Void in
+        AFHTTPClient.shareClient().GET("nalan/bulletin.json", parameters: nil, success: {(task:  NSURLSessionDataTask!, responseObject: AnyObject!) -> Void in
             
             if let callBack = callBackBlock {
                 
@@ -111,15 +111,14 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
                 } else {
                     print("get banner error")
                 }
-            }
-            
-            }, failure: { (task: NSURLSessionDataTask!, error: NSError!) -> Void in
+                
+            }}, failure: { (task: NSURLSessionDataTask!, error: NSError!) -> Void in
                 
                 if let callBack = callBackBlock {
                     callBack(result: NSArray(), error: error)
                 }
-        })
-        
+            }
+        )
     }
     
     
@@ -130,8 +129,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     func gotoMapVC() {
     
-//        var manager = AFHTTPRequestOperationManager(baseURL:NSURL(fileURLWithPath: ""))
-//        manager.GET("", parameters: <#AnyObject!#>, success: <#((AFHTTPRequestOperation!, AnyObject!) -> Void)!##(AFHTTPRequestOperation!, AnyObject!) -> Void#>, failure: <#((AFHTTPRequestOperation!, NSError!) -> Void)!##(AFHTTPRequestOperation!, NSError!) -> Void#>)
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		145B58364135460B512A6B91 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E6EF3BE75904D1E4190A8D /* libPods.a */; };
+		2D5517CA1B7DD6E7003FC358 /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5517C91B7DD6E7003FC358 /* Club.swift */; };
+		2D5517CC1B7DDCD3003FC358 /* Evaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5517CB1B7DDCD3003FC358 /* Evaluation.swift */; };
 		2D66C3C21B68D04B00D0D707 /* Extend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D66C3C11B68D04B00D0D707 /* Extend.swift */; };
 		2D6CCC4C1B6A13F9008B3CC4 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6CCC4A1B6A13F9008B3CC4 /* HomeTableViewCell.swift */; };
 		2D6CCC4D1B6A13F9008B3CC4 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6CCC4B1B6A13F9008B3CC4 /* HomeTableViewCell.xib */; };
@@ -53,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		0630319903249602068D298E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2D5517C91B7DD6E7003FC358 /* Club.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
+		2D5517CB1B7DDCD3003FC358 /* Evaluation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Evaluation.swift; sourceTree = "<group>"; };
 		2D66C3C11B68D04B00D0D707 /* Extend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extend.swift; sourceTree = "<group>"; };
 		2D6CCC4A1B6A13F9008B3CC4 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		2D6CCC4B1B6A13F9008B3CC4 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
@@ -318,6 +322,8 @@
 		7B90D2F51B739DC300E7CF39 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2D5517C91B7DD6E7003FC358 /* Club.swift */,
+				2D5517CB1B7DDCD3003FC358 /* Evaluation.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -493,6 +499,7 @@
 				2D841CCD1B6EFD6B00DF7AA4 /* SDWebImagePrefetcher.m in Sources */,
 				2D841CBE1B6EFD6B00DF7AA4 /* MBProgressHUD+Add.m in Sources */,
 				2D841CCB1B6EFD6B00DF7AA4 /* SDWebImageManager+MJ.m in Sources */,
+				2D5517CC1B7DDCD3003FC358 /* Evaluation.swift in Sources */,
 				2D92008F1B744F3F00B90973 /* ClubHeaderView.swift in Sources */,
 				2D6CCC4C1B6A13F9008B3CC4 /* HomeTableViewCell.swift in Sources */,
 				2D841CC21B6EFD6B00DF7AA4 /* NSTimer+Addition.m in Sources */,
@@ -510,6 +517,7 @@
 				2D841CC91B6EFD6B00DF7AA4 /* SDWebImageDownloader.m in Sources */,
 				2DAD73981B72F717005F4A87 /* RACEXTRuntimeExtensions.m in Sources */,
 				2D66C3C21B68D04B00D0D707 /* Extend.swift in Sources */,
+				2D5517CA1B7DD6E7003FC358 /* Club.swift in Sources */,
 				2D841CD41B6EFD6B00DF7AA4 /* StyledPageControl.m in Sources */,
 				2D841CC51B6EFD6B00DF7AA4 /* NSData+GIF.m in Sources */,
 				2D841CC41B6EFD6B00DF7AA4 /* UIView+PPCategory.m in Sources */,
