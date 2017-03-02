@@ -12,29 +12,31 @@ let BaseURL = "http://dev.kiklink.com:8086/v1/"
 
 class AFHTTPClient: AFHTTPSessionManager {
     
+    private static var __once: () = { () -> Void in
+            
+            let baseURL = URL(string: BaseURL)
+            let sessionConfig = URLSessionConfiguration.default
+            
+            // 设置缓存大小
+            let cache = URLCache(memoryCapacity: 10 * 1024 * 1024, diskCapacity: 5 * 1024 * 1024, diskPath: nil)
+            sessionConfig.urlCache = cache
+            
+            
+//            Static.shareClient = AFHTTPClient(baseURL: baseURL, sessionConfiguration: sessionConfig)
+//            Static.shareClient?.responseSerializer = AFJSONResponseSerializer()
+//            Static.shareClient?.requestSerializer = AFHTTPRequestSerializer()
+//            Static.shareClient?.responseSerializer.acceptableContentTypes = NSSet(object: "text/html") as Set<NSObject>
+            
+        }()
+    
     class func shareClient() -> AFHTTPClient {
         
         struct Static {
             static var shareClient: AFHTTPClient? = nil
-            static var onceToken: dispatch_once_t = 0
+            static var onceToken: Int = 0
         }
         
-        dispatch_once(&Static.onceToken, { () -> Void in
-            
-            let baseURL = NSURL(string: BaseURL)
-            let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
-            
-            // 设置缓存大小
-            let cache = NSURLCache(memoryCapacity: 10 * 1024 * 1024, diskCapacity: 5 * 1024 * 1024, diskPath: nil)
-            sessionConfig.URLCache = cache
-            
-            
-            Static.shareClient = AFHTTPClient(baseURL: baseURL, sessionConfiguration: sessionConfig)
-            Static.shareClient?.responseSerializer = AFJSONResponseSerializer()
-            Static.shareClient?.requestSerializer = AFHTTPRequestSerializer()
-            Static.shareClient?.responseSerializer.acceptableContentTypes = NSSet(object: "text/html") as Set<NSObject>
-            
-        })
+        _ = AFHTTPClient.__once
         
         return Static.shareClient!
     }
@@ -50,12 +52,12 @@ class AFHTTPClient2: AFHTTPSessionManager {
     }
     
     init() {
-        let baseURL = NSURL(string: BaseURL)
-        let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let baseURL = URL(string: BaseURL)
+        let sessionConfig = URLSessionConfiguration.default
         
         // 设置缓存大小
-        let cache = NSURLCache(memoryCapacity: 10 * 1024 * 1024, diskCapacity: 5 * 1024 * 1024, diskPath: nil)
-        sessionConfig.URLCache = cache
+        let cache = URLCache(memoryCapacity: 10 * 1024 * 1024, diskCapacity: 5 * 1024 * 1024, diskPath: nil)
+        sessionConfig.urlCache = cache
         
         super.init(baseURL: baseURL, sessionConfiguration: sessionConfig)
         
@@ -80,12 +82,12 @@ class AFHTTPClient3: AFHTTPSessionManager {
     }
     
     init() {
-        let baseURL = NSURL(string: BaseURL)
-        let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let baseURL = URL(string: BaseURL)
+        let sessionConfig = URLSessionConfiguration.default
         
         // 设置缓存大小
-        let cache = NSURLCache(memoryCapacity: 10 * 1024 * 1024, diskCapacity: 5 * 1024 * 1024, diskPath: nil)
-        sessionConfig.URLCache = cache
+        let cache = URLCache(memoryCapacity: 10 * 1024 * 1024, diskCapacity: 5 * 1024 * 1024, diskPath: nil)
+        sessionConfig.urlCache = cache
         
         super.init(baseURL: baseURL, sessionConfiguration: sessionConfig)
         
