@@ -100,6 +100,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     func getBannerDataFromServer(callBackBlock: BannerCallBackBlock?) {
         
+        
         AFHTTPClient.shareClient().GET("nalan/bulletin.json", parameters: nil, success: {(task:  NSURLSessionDataTask!, responseObject: AnyObject!) -> Void in
             
             if let callBack = callBackBlock {
