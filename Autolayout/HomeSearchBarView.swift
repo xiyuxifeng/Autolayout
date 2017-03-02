@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class HomeSearchBarView: UIView {
+open class HomeSearchBarView: UIView {
 
 
     @IBOutlet weak  var searchBtn: UIButton!

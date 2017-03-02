@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias BannerCallBackBlock = (result: AnyObject!, error: NSError?) -> Void
+typealias BannerCallBackBlock = (_ result: AnyObject?, _ error: NSError?) -> Void
 
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
@@ -20,18 +20,18 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let homeSearchBar: HomeSearchBarView = (UINib(nibName: "HomeSearchBarView", bundle: nil).instantiateWithOwner(self, options: nil).first) as! HomeSearchBarView
+        let homeSearchBar: HomeSearchBarView = (UINib(nibName: "HomeSearchBarView", bundle: nil).instantiate(withOwner: self, options: nil).first) as! HomeSearchBarView
         
         self.navigationItem.titleView = homeSearchBar
         
-        homeSearchBar.searchBtn.addTarget(self, action: "gotoSearchVC", forControlEvents: UIControlEvents.TouchUpInside)
+        homeSearchBar.searchBtn.addTarget(self, action: #selector(ViewController.gotoSearchVC), for: UIControlEvents.touchUpInside)
         
-        homeSearchBar.mapBtn.addTarget(self, action: "gotoMapVC", forControlEvents: UIControlEvents.TouchUpInside)
+        homeSearchBar.mapBtn.addTarget(self, action: #selector(ViewController.gotoMapVC), for: UIControlEvents.touchUpInside)
         
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.registerNib(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "homeSecondCell")
+        tableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "homeSecondCell")
         
         self.initHeaderView()
 
@@ -49,23 +49,23 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         }
     }
     
-    func initCycleScrollView(dataArr: NSArray) {
+    func initCycleScrollView(_ dataArr: NSArray) {
         
         let scale = SCREEN_WIDTH / 320.0
-        tableHeader.frame = CGRectMake(0, 0, SCREEN_WIDTH, 165.0 * scale)
+        tableHeader.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 165.0 * scale)
         
-        let headerView = CycleScrollView(frame: CGRectMake(0, 0, SCREEN_WIDTH, 165.0 * scale), animationDuration: 2.0, style: CycleStylePage, andImageCount: dataArr.count)
+        let headerView = CycleScrollView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 165.0 * scale), animationDuration: 2.0, style: CycleStylePage, andImageCount: dataArr.count)
         
         var imageArr = [UIImageView]()
  
         for dict in dataArr {
             
-            let imageUrl = (dict as! NSDictionary).valueForKey("images")?.firstObject
-            let imageView = UIImageView(frame:CGRectMake(0, 0, SCREEN_WIDTH, 165.0 * scale))
+            let imageUrl = ((dict as! NSDictionary).value(forKey: "images") as AnyObject).firstObject
+            let imageView = UIImageView(frame:CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 165.0 * scale))
             
             if (imageUrl != nil) && !(imageUrl is NSNull){
                 
-                imageView.setImageWithURL(NSURL(string: imageUrl as! String), placeholderImage: UIImage(named: "俱乐部课程穿插的图片的患冲图片"))
+                imageView.setImageWith(URL(string: imageUrl as! String), placeholderImage: UIImage(named: "俱乐部课程穿插的图片的患冲图片"))
             }
             
             imageArr.append(imageView)
@@ -73,16 +73,16 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             print(imageView)
         }
         
-        headerView.fetchContentViewAtIndex = {(pageIndex: Int) -> UIView in
+        headerView?.fetchContentViewAtIndex = {(pageIndex: Int) -> UIView in
             return imageArr[pageIndex]
         }
         
-        headerView.totalPagesCount = { dataArr.count }
+        headerView?.totalPagesCount = { dataArr.count }
         
-        headerView.TapActionBlock = {(pageIndex: Int) in
+        headerView?.tapActionBlock = {(pageIndex: Int) in
             let dict = dataArr[pageIndex] as! NSDictionary
-            let type = dict.valueForKey("type") as! Int
-            var toid = dict.valueForKey("toid") as! Int
+            let type = dict.value(forKey: "type") as! Int
+            var toid = dict.value(forKey: "toid") as! Int
             
             if type == 1 {
                 
@@ -98,28 +98,28 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
     }
     
-    func getBannerDataFromServer(callBackBlock: BannerCallBackBlock?) {
+    func getBannerDataFromServer(_ callBackBlock: BannerCallBackBlock?) {
         
         
-        AFHTTPClient.shareClient().GET("nalan/bulletin.json", parameters: nil, success: {(task:  NSURLSessionDataTask!, responseObject: AnyObject!) -> Void in
+        /*AFHTTPClient.shareClient().get("nalan/bulletin.json", parameters: nil, success: {(task:  URLSessionDataTask!, responseObject: AnyObject!) -> Void in
             
             if let callBack = callBackBlock {
                 
-                if !(responseObject.valueForKey("data") is NSNull) {
+                if !(responseObject.value(forKey: "data") is NSNull) {
                     
-                    callBack(result: responseObject.valueForKey("data"), error: nil)
+                    callBack(result: responseObject.value(forKey: "data"), error: nil)
                     
                 } else {
                     print("get banner error")
                 }
                 
-            }}, failure: { (task: NSURLSessionDataTask!, error: NSError!) -> Void in
+            }}, failure: { (task: URLSessionDataTask!, error: NSError!) -> Void in
                 
                 if let callBack = callBackBlock {
                     callBack(result: NSArray(), error: error)
                 }
             }
-        )
+        )*/
     }
     
     
@@ -132,17 +132,17 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return IS_IPHONE_6P ? 200.0 : 165.0
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("homeSecondCell", forIndexPath: indexPath) as! HomeTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "homeSecondCell", for: indexPath) as! HomeTableViewCell
         return cell
         
     }
